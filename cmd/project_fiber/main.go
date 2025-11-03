@@ -25,7 +25,7 @@ func main() {
 
 	// health check
 	app.Get("/healthz", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{"ok": true, "service": "project_fiber"})
+		return c.JSON(fiber.Map{"ok test trigger ": true, "service": "project_fiber"})
 	})
 
 	project.New(pool).Mount(app)
